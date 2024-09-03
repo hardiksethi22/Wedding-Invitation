@@ -135,4 +135,4 @@ const countDownClock = (targetDate) => {
   Provide the target date as a string.
   Example: 'December 31, 2024 23:59:59' or '2024-12-31T23:59:59'
 */
-countDownClock('2024-11-27T23:59:59');
+countDownClock('2024-11-26T23:59:59');
