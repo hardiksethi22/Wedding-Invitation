@@ -378,8 +378,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: #d1c2f8;
-	border: 5px solid #dfd8f1;
+	background-color: #f1eef7;
+	border: 5px solid #f5f4f8;
 	width: 140px;
 	height: 140px;
 	border-radius: 99px;
@@ -389,7 +389,7 @@ body {
   .hours,
   .minutes,
   .seconds {
-	color:#fff;
+	color:#674ea7;
 	font-size: 2.5em; 
 	margin: 10px 0;
   }
@@ -399,6 +399,7 @@ body {
   .hours-label,
   .minutes-label,
   .seconds-label {
+	color:#674ea7;
 	text-transform: uppercase;
 	margin-bottom: 5px;
   }
