@@ -83,7 +83,7 @@ var styles2 = [
     , 'font-size: 32px'
 ].join(';');
 
-console.log('\n\n%c SAVE THE DATE: 27th Nov, 2020!', styles);
+console.log('\n\n%c SAVE THE DATE: 27th Nov, 2024!', styles);
 
 console.log('%cYour presence is requested!%c', styles1, styles2);
 
