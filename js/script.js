@@ -18,10 +18,10 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-// $(document).ready(function(){
-//     document.getElementById("my_audio").play();
-//     console.log('Shaadi me zaroor zaroor aana');
-// });
+$(document).on("click",function(){
+    document.getElementById("my_audio").play();
+    console.log('Shaadi me zaroor zaroor aana');
+});
 // $(document).ready(function() {
 //   $("#my_audio").get(0).play();
 // });
