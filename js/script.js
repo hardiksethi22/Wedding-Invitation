@@ -27,29 +27,53 @@ $(document).on('click', function(){
 var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+// var x = setInterval(function() {
 
-    // Get todays date and time
-    var now = new Date().getTime();
+//     // Get todays date and time
+//     var now = new Date().getTime();
     
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+//     // Find the distance between now and the count down date
+//     var distance = countDownDate - now;
     
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     // Time calculations for days, hours, minutes and seconds
+//     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    // Output the result in an element with id="demo"
-    document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
+//     // Output the result in an element with id="demo"
+//     document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
     
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("time").innerHTML = "Bless the married couple for happy life!";
-    }
-}, 1000);
+//     // If the count down is over, write some text 
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.getElementById("time").innerHTML = "Bless the married couple for happy life!";
+//     }
+// }, 1000);
+
+<section class="countdown-container">
+  
+  <div class="days-container">
+    <div class="days"></div>
+    <div class="days-label">days</div>
+  </div>
+  
+  <div class="hours-container">
+    <div class="hours"></div>
+    <div class="hours-label">hours</div>
+  </div>
+  
+  <div class="minutes-container">
+    <div class="minutes"></div>
+    <div class="minutes-label">minutes</div>
+  </div>
+  
+  <div class="seconds-container">
+    <div class="seconds"></div>
+    <div class="seconds-label">seconds</div>
+  </div>
+  
+</section>
 
 // being a bit cool :p  
 var styles = [
@@ -91,3 +115,61 @@ console.log(
     `%cShaadi me zaroor aana!\n\n`,
     'color: yellow; background:tomato; font-size: 24pt; font-weight: bold',
 )
+
+
+const countDownClock = (number = 100, format = 'seconds') => {
+  
+    const d = document;
+    const daysElement = d.querySelector('.days');
+    const hoursElement = d.querySelector('.hours');
+    const minutesElement = d.querySelector('.minutes');
+    const secondsElement = d.querySelector('.seconds');
+    let countdown;
+    convertFormat(format);
+    
+    
+    function convertFormat(format) {
+      switch(format) {
+        case 'seconds':
+          return timer(number);
+        case 'minutes':
+          return timer(number * 60);
+          case 'hours':
+          return timer(number * 60 * 60);
+        case 'days':
+          return timer(number * 60 * 60 * 24);             
+      }
+    }
+  
+    function timer(seconds) {
+      const now = Date.now();
+      const then = now + seconds * 1000;
+  
+      countdown = setInterval(() => {
+        const secondsLeft = Math.round((then - Date.now()) / 1000);
+  
+        if(secondsLeft <= 0) {
+          clearInterval(countdown);
+          return;
+        };
+  
+        displayTimeLeft(secondsLeft);
+  
+      },1000);
+    }
+  
+    function displayTimeLeft(seconds) {
+      daysElement.textContent = Math.floor(seconds / 86400);
+      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+    }
+  }
+  
+  
+  /*
+    start countdown
+    enter number and format
+    days, hours, minutes or seconds
+  */
+  countDownClock(84, 'days');
