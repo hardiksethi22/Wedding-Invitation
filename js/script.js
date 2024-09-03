@@ -18,7 +18,7 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).on("scroll",function(){
+$(document).on("click",function(){
     document.getElementById("my_audio").play();
     console.log('Shaadi me zaroor zaroor aana');
 });
