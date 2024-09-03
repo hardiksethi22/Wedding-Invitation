@@ -374,6 +374,7 @@ body {
   .hours-container,
   .minutes-container, 
   .seconds-container {
+	color: #dd99ff;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
