@@ -23,10 +23,10 @@ $(document).on('click', function(){
     console.log('Shaadi me zaroor aana');
 });
 
-// Set the date we're counting down to
-var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
+// // Set the date we're counting down to
+// var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
 
-// Update the count down every 1 second
+// // Update the count down every 1 second
 // var x = setInterval(function() {
 
 //     // Get todays date and time
@@ -51,29 +51,6 @@ var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
 //     }
 // }, 1000);
 
-<section class="countdown-container">
-  
-  <div class="days-container">
-    <div class="days"></div>
-    <div class="days-label">days</div>
-  </div>
-  
-  <div class="hours-container">
-    <div class="hours"></div>
-    <div class="hours-label">hours</div>
-  </div>
-  
-  <div class="minutes-container">
-    <div class="minutes"></div>
-    <div class="minutes-label">minutes</div>
-  </div>
-  
-  <div class="seconds-container">
-    <div class="seconds"></div>
-    <div class="seconds-label">seconds</div>
-  </div>
-  
-</section>
 
 // being a bit cool :p  
 var styles = [
