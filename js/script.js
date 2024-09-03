@@ -94,59 +94,45 @@ console.log(
 )
 
 
-const countDownClock = (number = 100, format = 'seconds') => {
-  
-    const d = document;
-    const daysElement = d.querySelector('.days');
-    const hoursElement = d.querySelector('.hours');
-    const minutesElement = d.querySelector('.minutes');
-    const secondsElement = d.querySelector('.seconds');
-    let countdown;
-    convertFormat(format);
-    
-    
-    function convertFormat(format) {
-      switch(format) {
-        case 'seconds':
-          return timer(number);
-        case 'minutes':
-          return timer(number * 60);
-          case 'hours':
-          return timer(number * 60 * 60);
-        case 'days':
-          return timer(number * 60 * 60 * 24);             
-      }
-    }
-  
-    function timer(seconds) {
+const countDownClock = (targetDate) => {
+  const d = document;
+  const daysElement = d.querySelector('.days');
+  const hoursElement = d.querySelector('.hours');
+  const minutesElement = d.querySelector('.minutes');
+  const secondsElement = d.querySelector('.seconds');
+  let countdown;
+
+  function timer(endTime) {
+    countdown = setInterval(() => {
       const now = Date.now();
-      const then = now + seconds * 1000;
-  
-      countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000);
-  
-        if(secondsLeft <= 0) {
-          clearInterval(countdown);
-          return;
-        };
-  
-        displayTimeLeft(secondsLeft);
-  
-      },1000);
-    }
-  
-    function displayTimeLeft(seconds) {
-      daysElement.textContent = Math.floor(seconds / 86400);
-      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
-      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
-      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-    }
+      const secondsLeft = Math.round((endTime - now) / 1000);
+
+      if (secondsLeft <= 0) {
+        clearInterval(countdown);
+        displayTimeLeft(0); // Display all zeroes when the countdown ends
+        return;
+      }
+
+      displayTimeLeft(secondsLeft);
+
+    }, 1000);
   }
-  
-  
-  /*
-    start countdown
-    enter number and format
-    days, hours, minutes or seconds
-  */
-  countDownClock(84, 'days');
+
+  function displayTimeLeft(seconds) {
+    daysElement.textContent = Math.floor(seconds / 86400);
+    hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+    minutesElement.textContent = Math.floor((seconds % 3600) / 60);
+    secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  }
+
+  // Start the timer with the target date
+  const endTime = new Date(targetDate).getTime();
+  timer(endTime);
+}
+
+/*
+  Start countdown from a specific date.
+  Provide the target date as a string.
+  Example: 'December 31, 2024 23:59:59' or '2024-12-31T23:59:59'
+*/
+countDownClock('2024-11-27T23:59:59');
