@@ -378,8 +378,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(239, 82, 236, 0.368);
-	border: 5px solid rgba(220, 80, 230, 0.3);
+	background-color: #bba7ed;
+	border: 5px solid #9b7beb;
 	width: 140px;
 	height: 140px;
 	border-radius: 99px;
