@@ -22,9 +22,9 @@
 //     document.getElementById("my_audio").play();
 //     console.log('Shaadi me zaroor zaroor aana');
 // });
-$(document).ready(function() {
-  $("#my_audio").get(0).play();
-});
+// $(document).ready(function() {
+//   $("#my_audio").get(0).play();
+// });
 
 // // Set the date we're counting down to
 // var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
