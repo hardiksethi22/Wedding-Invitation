@@ -18,10 +18,10 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).ready(function(){
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor zaroor aana');
-});
+// $(document).ready(function(){
+//     document.getElementById("my_audio").play();
+//     console.log('Shaadi me zaroor zaroor aana');
+// });
 
 // // Set the date we're counting down to
 // var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
