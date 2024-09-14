@@ -647,7 +647,7 @@ a {
 }
 
 .overlay {
-	background: rgb(114, 2, 101);
+	background: #720265;
 	width: 100%;
   	height: 100%;
 	top: 0;
@@ -661,10 +661,10 @@ a {
 
 .overlay-text{
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	font-size: 50px;
-	color: white;
+	color: #EFBF04;
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
   }
