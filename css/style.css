@@ -658,7 +658,11 @@ a {
 	position: fixed;
 	z-index: 9999;
 	opacity: 1;
-	transition: opacity 10s ease-out 10s;
+	transition: opacity 5s ease-out;
+}
+
+.overlay:click{
+	opacity: 0;
 }
 
 .overlay-text{
