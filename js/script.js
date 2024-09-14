@@ -17,10 +17,19 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).on("click", function () {
-  document.getElementById("my_audio").play();
-  console.log("Shaadi me zaroor aana");
-});
+
+var overlay = $(".overlay");
+    overlay.on("click", function (e) {
+        overlay
+            .hide()
+            .off();
+        document.getElementById("my_audio").play();
+    });
+    
+// $(document).on("click", function () {
+//   document.getElementById("my_audio").play();
+//   console.log("Shaadi me zaroor aana");
+// });
 // $(document).ready(function() {
 //   $("#my_audio").get(0).play();
 // });
