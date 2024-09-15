@@ -647,7 +647,8 @@ a {
 }
 
 .overlay {
-	background: #674ea7;
+	/* background: #674ea7; */
+	background-image: radial-gradient(circle, #674ea7, #836ac2, #c1aef3);
 	width: 100%;
   	height: 100%;
 	top: 0;
