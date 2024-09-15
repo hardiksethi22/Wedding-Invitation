@@ -22,11 +22,9 @@ var overlay = $(".overlay");
 var overlayText = $(".overlay-text");
     overlay.on("click", function (e) {
         overlay
-            .fadeOut(2500)
-            .off();
+            .fadeOut(2500);
         overlayText
-            .fadeOut(2500)
-            .off();
+            .fadeOut(2500);
         document.getElementById("my_audio").play();
     });
     
