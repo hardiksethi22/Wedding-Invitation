@@ -668,6 +668,7 @@ a {
 
 .overlay-text{
     margin-top: -100px;
+	margin-left: -50px;
     position: absolute;
     text-align: center;
     top: 50%;
