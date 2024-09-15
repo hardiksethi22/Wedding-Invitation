@@ -670,8 +670,8 @@ a {
     position: absolute;
     top: 30%;
     left: 50%;
-    margin-left: -50px;
-    margin-top: -25px;
+    /* margin-left: -50px;
+    margin-top: -25px; */
 	font-family: 'Dancing Script', cursive;
 	font-weight: bold;
 	font-style: normal;
