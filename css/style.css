@@ -667,12 +667,11 @@ a {
 }
 
 .overlay-text{
-    margin-top: -100px;
-	margin-left: -50px;
     position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
+    top: 30%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -25px;
 	font-family: 'Dancing Script', cursive;
 	font-weight: bold;
 	font-style: normal;
