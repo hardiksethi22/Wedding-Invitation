@@ -19,9 +19,13 @@
  */
 
 var overlay = $(".overlay");
+var overlayText = $(".overlay-text");
     overlay.on("click", function (e) {
         overlay
-            .fadeOut(2000)
+            .fadeOut(2500)
+            .off();
+        overlayText
+            .fadeOut(2500)
             .off();
         document.getElementById("my_audio").play();
     });
