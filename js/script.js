@@ -21,7 +21,7 @@
 var overlay = $(".overlay");
     overlay.on("click", function (e) {
         overlay
-            .hide()
+            .fadeOut(3000)
             .off();
         document.getElementById("my_audio").play();
     });
